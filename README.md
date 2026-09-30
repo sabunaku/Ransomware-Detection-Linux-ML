@@ -343,16 +343,34 @@ The machine-learning evaluation can be rerun using the training and evaluation s
 ## Repository Structure
 
 
-| Directory / File | Purpose |
-|---|---|
-| `data/` | Final dataset used for machine-learning experiments. |
-| `src/` | Monitoring, benign activity generation, and machine-learning scripts. |
-| `results/` | Selected figures and feature-importance results from the experiments. |
-| `references/` | Attribution and information about related work used in the project. |
-| `README.md` | Project documentation and methodology. |
-| `requirements.txt` | Python dependencies required for the machine-learning pipeline. |
-| `.gitignore` | Prevents raw logs, intermediate files, generated data, and local environment files from being committed. |
-| `LICENSE` | License for the project. |
+## Repository Structure
+
+```text
+Ransomware-Detection-Linux-ML/
+│
+├── data/                         # Final dataset used for ML experiments
+│   └── final_dataset_shuffled.csv
+│
+├── references/                   # Related-work references
+│   └── ebpfangel.md
+│
+├── results/                      # Selected experimental results
+│   ├── figures/
+│   │   ├── confusion_matrix.png
+│   │   ├── ROC Curve Comparison.png
+│   │   └── top_10_features.png
+│   └── top_10_features.csv
+│
+├── src/                          # Project source code
+│   ├── zerolocker_monitor.py     # eBPF-based system-call monitoring
+│   ├── benign_behavior_generator.py
+│   ├── Benign_behavior_simulation.py
+│   └── train_and_evaluate.py     # ML training and evaluation
+│
+├── .gitignore                    # Excluded files and local artifacts
+├── LICENSE                       # Project license
+├── README.md                     # Project documentation
+└── requirements.txt              # Python dependencies
 
 
 ---
