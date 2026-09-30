@@ -25,23 +25,15 @@ The project was developed as an academic cybersecurity research project and focu
 The overall research process follows the following framework:
 
 
-Data Collection
-       ↓
-Data Preprocessing
-       ↓
-Feature Engineering
-       ↓
-Model Selection
-       ↓
-Model Training
-       ↓
-Evaluation
-       ↓
-Testing
-       ↓
-Deployment
-       ↑
-       └──────── Evaluation feedback
+flowchart LR
+    A[Data Collection] --> B[Data Preprocessing]
+    B --> C[Feature Engineering]
+    C --> D[Model Selection]
+    D --> E[Model Training]
+    E --> F[Evaluation]
+    F --> G[Testing]
+    G --> H[Deployment]
+    G -. Feedback .-> F
 
 
 The implementation focuses primarily on the data collection, preprocessing, feature engineering, model training, evaluation, and testing stages.
@@ -177,8 +169,8 @@ This keeps the repository focused on the reproducible machine-learning dataset w
 
 The project represents filesystem activity using three basic event types:
 
-O = Open
-C = Create
+O = Open, 
+C = Create, 
 D = Delete
 
 Sequences of three events are represented as triplets (three-event n-grams).
@@ -205,12 +197,12 @@ The frequency of these patterns is used to represent behavioral characteristics 
 The feature set also contains aggregate activity measures:
 
 
-O_sum
-C_sum
+O_sum, 
+C_sum, 
 D_sum
 
-O_max
-C_max
+O_max, 
+C_max, 
 D_max
 
 
@@ -251,7 +243,7 @@ src/train_and_evaluate.py
 
 The final dataset is divided into training and testing subsets using an 80/20 split:
 
-80% → Training
+80% → Training, 
 20% → Testing
 
 
@@ -320,12 +312,28 @@ The repository contains selected experimental results and figures rather than al
 
 ### Included results
 
-results/
-├── top_10_features.csv
-└── figures/
-    ├── Figure_1.png
-    ├── confusion_matrix.png
-    └── top_10_features.png
+## Included Results
+
+The repository includes selected outputs from the project experiments to provide a visual summary of the machine-learning evaluation.
+
+| Result | Description |
+|---|---|
+| **Confusion Matrix** | Shows the classification outcomes for the evaluated machine-learning models. |
+| **ROC Curve Comparison** | Shows the ROC curves used to compare model classification performance. |
+| **Top 10 Feature Importance** | Shows the ten most influential behavioral features identified by the Random Forest model. |
+| **Feature Importance Data** | CSV file containing the corresponding feature-importance values. |
+
+### Confusion Matrix
+
+![Confusion Matrix](results/figures/confusion_matrix.png)
+
+### ROC Curve Comparison
+
+![ROC Curve Comparison](results/figures/ROC%20Curve%20Comparison.png)
+
+### Top 10 Feature Importance
+
+![Top 10 Feature Importance](results/figures/top_10_features.png)
 
 
 `Figure_1.png` provides an overview of the project's experimental/research framework.
@@ -336,31 +344,45 @@ The machine-learning evaluation can be rerun using the training and evaluation s
 
 ## Repository Structure
 
+## Repository Structure
+
 Ransomware-Detection-Linux-ML/
-│
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── LICENSE
-│
-├── src/
-│   ├── zerolocker_monitor.py
-│   ├── benign_behavior_generator.py
-│   ├── benign_behavior_simulation.py
-│   └── train_and_evaluate.py
 │
 ├── data/
 │   └── final_dataset_shuffled.csv
 │
-├── results/
-│   ├── top_10_features.csv
-│   └── figures/
-│       ├── Figure_1.png
-│       ├── confusion_matrix.png
-│       └── top_10_features.png
+├── references/
+│   └── ebpfangel.md
 │
-└── references/
-    └── ebpfangel.md
+├── results/
+│   ├── figures/
+│   │   ├── confusion_matrix.png
+│   │   ├── ROC Curve Comparison.png
+│   │   └── top_10_features.png
+│   └── top_10_features.csv
+│
+├── src/
+│   ├── zerolocker_monitor.py
+│   ├── benign_behavior_generator.py
+│   ├── Benign_behavior_simulation.py
+│   └── train_and_evaluate.py
+│
+├── .gitignore
+├── LICENSE
+├── README.md
+└── requirements.txt
+
+
+| Directory / File | Purpose |
+|---|---|
+| `data/` | Final dataset used for machine-learning experiments. |
+| `src/` | Monitoring, benign activity generation, and machine-learning scripts. |
+| `results/` | Selected figures and feature-importance results from the experiments. |
+| `references/` | Attribution and information about related work used in the project. |
+| `README.md` | Project documentation and methodology. |
+| `requirements.txt` | Python dependencies required for the machine-learning pipeline. |
+| `.gitignore` | Prevents raw logs, intermediate files, generated data, and local environment files from being committed. |
+| `LICENSE` | License for the project. |
 
 
 ---
