@@ -342,36 +342,38 @@ The machine-learning evaluation can be rerun using the training and evaluation s
 
 ## Repository Structure
 
+The repository is organized into the following main components:
 
-## Repository Structure
+### `data/`
+Contains the final dataset used for the machine-learning experiments.
 
-```text
-Ransomware-Detection-Linux-ML/
-│
-├── data/                         # Final dataset used for ML experiments
-│   └── final_dataset_shuffled.csv
-│
-├── references/                   # Related-work references
-│   └── ebpfangel.md
-│
-├── results/                      # Selected experimental results
-│   ├── figures/
-│   │   ├── confusion_matrix.png
-│   │   ├── ROC Curve Comparison.png
-│   │   └── top_10_features.png
-│   └── top_10_features.csv
-│
-├── src/                          # Project source code
-│   ├── zerolocker_monitor.py     # eBPF-based system-call monitoring
-│   ├── benign_behavior_generator.py
-│   ├── Benign_behavior_simulation.py
-│   └── train_and_evaluate.py     # ML training and evaluation
-│
-├── .gitignore                    # Excluded files and local artifacts
-├── LICENSE                       # Project license
-├── README.md                     # Project documentation
-└── requirements.txt              # Python dependencies
-```
+- `final_dataset_shuffled.csv`
+
+### `src/`
+Contains the main project source code.
+
+- `zerolocker_monitor.py` — eBPF-based system-call monitoring.
+- `benign_behavior_generator.py` — Generates benign system activity.
+- `Benign_behavior_simulation.py` — Simulates common benign workloads.
+- `train_and_evaluate.py` — Trains and evaluates the machine-learning models.
+
+### `results/`
+Contains selected results from the project experiments.
+
+- `figures/` — Confusion matrix, ROC curve, and feature-importance figures.
+- `top_10_features.csv` — Random Forest feature-importance results.
+
+### `references/`
+Contains references and attribution for related work.
+
+- `ebpfangel.md` — Reference to the eBPFAngel project used in the first experimental stage.
+
+### Project Files
+
+- `README.md` — Project documentation.
+- `requirements.txt` — Python dependencies.
+- `.gitignore` — Specifies files and directories excluded from version control.
+- `LICENSE` — Project license.
 
 ---
 
