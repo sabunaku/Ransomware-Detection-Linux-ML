@@ -371,7 +371,7 @@ Ransomware-Detection-Linux-ML/
 ├── LICENSE                       # Project license
 ├── README.md                     # Project documentation
 └── requirements.txt              # Python dependencies
-
+```
 
 ---
 
