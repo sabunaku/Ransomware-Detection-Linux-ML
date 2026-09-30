@@ -24,7 +24,7 @@ The project was developed as an academic cybersecurity research project and focu
 
 The overall research process follows the following framework:
 
-
+```mermaid
 flowchart LR
     A[Data Collection] --> B[Data Preprocessing]
     B --> C[Feature Engineering]
@@ -34,6 +34,7 @@ flowchart LR
     F --> G[Testing]
     G --> H[Deployment]
     G -. Feedback .-> F
+```
 
 
 The implementation focuses primarily on the data collection, preprocessing, feature engineering, model training, evaluation, and testing stages.
@@ -310,7 +311,6 @@ results/figures/top_10_features.png
 
 The repository contains selected experimental results and figures rather than all intermediate experiment artifacts.
 
-### Included results
 
 ## Included Results
 
@@ -336,41 +336,11 @@ The repository includes selected outputs from the project experiments to provide
 ![Top 10 Feature Importance](results/figures/top_10_features.png)
 
 
-`Figure_1.png` provides an overview of the project's experimental/research framework.
-
 The machine-learning evaluation can be rerun using the training and evaluation script. The repository also includes selected figures and feature-importance results from the project experiments.
 
 ---
 
 ## Repository Structure
-
-## Repository Structure
-
-Ransomware-Detection-Linux-ML/
-│
-├── data/
-│   └── final_dataset_shuffled.csv
-│
-├── references/
-│   └── ebpfangel.md
-│
-├── results/
-│   ├── figures/
-│   │   ├── confusion_matrix.png
-│   │   ├── ROC Curve Comparison.png
-│   │   └── top_10_features.png
-│   └── top_10_features.csv
-│
-├── src/
-│   ├── zerolocker_monitor.py
-│   ├── benign_behavior_generator.py
-│   ├── Benign_behavior_simulation.py
-│   └── train_and_evaluate.py
-│
-├── .gitignore
-├── LICENSE
-├── README.md
-└── requirements.txt
 
 
 | Directory / File | Purpose |
