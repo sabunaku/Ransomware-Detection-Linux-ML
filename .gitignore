@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE / editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local environment / secrets
+.env
+.env.*
+
+# Raw ransomware / execution logs
+run*.csv
+zerolocker_analysis*.csv
+*_RAW/
+ZERO_RAW/
+benign_RAW/
+
+# Intermediate datasets
+*_clean.csv
+*_triplets.csv
+merged_*.csv
+zerolocker_triplets*.csv
+
+# Local experiment outputs
+quick_summary.json
+logs_with_heuristic_labels.csv
+
+# Generated benign activity
+benign_activity_demo/
+benign_temp/
+benign_behavior.log
+benign_custom_log.txt
